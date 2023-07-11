@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Форма реєстрації</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="registration-form">
+    <h2>Форма реєстрації</h2>
+    <form>
+      <label for="first-name">Ім'я:</label>
+      <input type="text" id="first-name" required><br>
+
+      <label for="last-name">Прізвище:</label>
+      <input type="text" id="last-name" required><br>
+
+      <label for="birthdate">Дата народження:</label>
+      <input type="text" id="birthdate" required><br>
+
+      <label>Стать:</label>
+      <input type="radio" name="gender" value="male" required> Чоловіча
+      <input type="radio" name="gender" value="female" required> Жіноча<br>
+
+      <label for="city">Місто:</label>
+      <select id="city" required>
+        <option value="">Оберіть місто</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Lviv">Львів</option>
+        <option value="Odessa">Одеcса</option>
+      </select><br>
+
+      <label for="address">Адреса:</label><br>
+      <textarea id="address" rows="4" required></textarea><br>
+
+      <label>Мови, якими володіє:</label><br>
+      <input type="checkbox" id="language1" value="Ukrainian"> Українська<br>
+      <input type="checkbox" id="language2" value="English"> Англійська<br>
+      <input type="checkbox" id="language3" value="French"> Французька<br>
+
+      <button type="button" onclick="displayTable()">Зберегти</button>
+    </form>
+  </div>
+
+  <div id="registration-table" style="display: none;">
+    <h2>Таблиця з даними</h2>
+    <table>
+      <tr>
+        <th>Ім'я</th>
+        <th>Прізвище</th>
+        <th>Дата народження</th>
+        <th>Стать</th>
+        <th>Місто</th>
+        <th>Адреса</th>
+        <th>Мови</th>
+      </tr>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+</body>
+</html>
